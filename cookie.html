@@ -62,14 +62,21 @@ function checkCookie() {
    
 <div id='buttons'>
     <button id="logIn" class="btn btn-primary">Login</button>
-<button id="logIn" class="btn btn-success">Create New</button>
+<button id="createNew" class="btn btn-success">Create New</button>
 </div>
 
 </div>
 </div><!--end log form -->
 
 
+<script>
+ $(document).ready(function(){
 
+ $("#logIn").click(function(){
+  var log =  $("#logIn").val();
+  alert(log);
+ });
+    });
 
 </html>
 
