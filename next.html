@@ -1,5 +1,60 @@
 <html>
+<head>
+<title> Next </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <link rel="stylesheet" href="./scripts/style.css">
+	
+	<style>
+		#nameHere{margin:5%}
+	</style>
+<script type="text/javascript">
+	
+	
+	function checkCookie() {
+  var user=getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+    //$('#nameHere').html(user);
+     document.getElementById("nameHere").innerHTML = user;
+    //document.getElementById("userName").value = user;
+    // $('#userName').html(user);
+  // } else {
+  //    user = prompt("Please enter your name:","");
+  //    if (user != "" && user != null) {
+  //      setCookie("username", user, 30);
+  //    }
+  }
+}
+	
+	
+	function checkC() { alert("did something");
+		 document.getElementById("nameHere").innerHTML = "Paragraph chaned gain!";
+			  }
+</script>
+
+</head>
 
 
-rnext
+
+
+
+	
+<div id="nameHere">read</div>
+	
+	
+	
+<p id="demo" onclick="myFunction()">Click me to change my HTML content (innerHTML).</p>
+
+<script>
+function myFunction() {
+	
+  document.getElementById("demo").innerHTML = "Paragraph changed!";
+  checkC();
+	
+}
+</script>
+
+
 </html>
