@@ -34,7 +34,8 @@ function checkCookie() {
   var user=getCookie("username");
   if (user != "") {
     alert("Welcome again " + user);
-    $('#userName').html(user);
+    document.getElementById("mytext").value = user;
+    // $('#userName').html(user);
   // } else {
   //    user = prompt("Please enter your name:","");
   //    if (user != "" && user != null) {
