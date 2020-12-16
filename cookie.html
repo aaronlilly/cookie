@@ -34,11 +34,11 @@ function checkCookie() {
   var user=getCookie("username");
   if (user != "") {
     alert("Welcome again " + user);
-  } else {
-     user = prompt("Please enter your name:","");
-     if (user != "" && user != null) {
-       setCookie("username", user, 30);
-     }
+  // } else {
+  //    user = prompt("Please enter your name:","");
+  //    if (user != "" && user != null) {
+  //      setCookie("username", user, 30);
+  //    }
   }
 }
 
@@ -55,7 +55,7 @@ function checkCookie() {
 </div>
 <div id ="formIn">
 
-    <input type="text" title="username" class='inputbox' placeholder="username" />
+    <input type="text" title="username" id="userName" class='inputbox' placeholder="username" />
     <input type="password" title="username" class='inputbox' placeholder="password" />
 <br>
 <br>
@@ -73,8 +73,10 @@ function checkCookie() {
  $(document).ready(function(){
 
  $("#logIn").click(function(){
-  var log =  $("#logIn").val();
-  alert(log);
+  var log =  $("#userName").val();
+  ;
+
+   setCookie("username", log, 30)
  });
     });
 </script>
