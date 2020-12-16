@@ -34,7 +34,7 @@ function checkCookie() {
   var user=getCookie("username");
   if (user != "") {
     alert("Welcome again " + user);
-    document.getElementById("mytext").value = user;
+    document.getElementById("userName").value = user;
     // $('#userName').html(user);
   // } else {
   //    user = prompt("Please enter your name:","");
@@ -57,8 +57,8 @@ function checkCookie() {
 </div>
 <div id ="formIn">
 
-    <input type="text" title="username" id="userName" class='inputbox' placeholder="username" />
-    <input type="password" title="username" class='inputbox' placeholder="password" />
+    <input type="text" id="userName" class='inputbox' placeholder="username" />
+    <input type="password"class='inputbox' placeholder="password" />
 <br>
 <br>
    
