@@ -29,7 +29,8 @@
 }
 	
 	
-	function checkC() {document.getElementById("nameHere").innerHTML = "done"
+	function checkC() { 
+		document.getElementById("nameHere").innerHTML = "done";
 			  }
 </script>
 
@@ -43,7 +44,16 @@
 <body onload="checkC()"></body>
 	
 <div id="nameHere">read</div>
+	
+	
+	
+<p id="demo" onclick="myFunction()">Click me to change my HTML content (innerHTML).</p>
 
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed!";
+}
+</script>
 
 
 </html>
