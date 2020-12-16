@@ -13,6 +13,10 @@
   var expires = "expires=" + d.toGMTString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/next/";
+   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/next";
+     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=next";
+  
+  //$.cookie('name', 'value', { path: '/' });
 }
 
 function getCookie(cname) {
