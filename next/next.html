@@ -10,7 +10,8 @@
   var user=getCookie("username");
   if (user != "") {
     alert("Welcome again " + user);
-    $('#nameHere').html(user);
+    //$('#nameHere').html(user);
+     document.getElementById("userName").innerHTML = user;
     //document.getElementById("userName").value = user;
     // $('#userName').html(user);
   // } else {
