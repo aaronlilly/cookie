@@ -5,13 +5,19 @@
 
  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <link rel="stylesheet" href="./scripts/style.css">
+	
+	<style>
+		#nameHere{margin:5%}
+	</style>
 <script type="text/javascript">
+	
+	
 	function checkCookie() {
   var user=getCookie("username");
   if (user != "") {
     alert("Welcome again " + user);
     //$('#nameHere').html(user);
-     document.getElementById("userName").innerHTML = user;
+     document.getElementById("nameHere").innerHTML = user;
     //document.getElementById("userName").value = user;
     // $('#userName').html(user);
   // } else {
