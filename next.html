@@ -15,7 +15,7 @@
 	function checkCookie() {
   var user=getCookie("username");
   if (user != "") {
-    alert("Welcome again " + user);
+    //alert("Welcome again " + user);
     //$('#nameHere').html(user);
      document.getElementById("nameHere").innerHTML = user;
     //document.getElementById("userName").value = user;
@@ -29,8 +29,10 @@
 }
 	
 	
-	function checkC() { alert("did something");
-		 document.getElementById("nameHere").innerHTML = "Paragraph chaned gain!";
+	function checkC() { 
+
+		 //document.getElementById("nameHere").innerHTML = "Paragraph chaned gain!";
+
 			  }
 </script>
 
@@ -45,7 +47,7 @@
 	
 	
 	
-<p id="demo" onclick="myFunction()">Click me to change my HTML content (innerHTML).</p>
+<p id="demo" onclick="checkCookie()">Click me to change my HTML content (innerHTML).</p>
 
 <script>
 function myFunction() {
