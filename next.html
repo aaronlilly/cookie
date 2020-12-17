@@ -31,8 +31,8 @@ function getCookie(cname) {
 function checkCookie() {
   var user=getCookie("username");
   if (user != "") {
-    document.getElementById("userName").InnerHTML = user;
-//     alert("Welcome again " + user);
+    document.getElementById("userName").innerHTML = user;
+  alert("Welcome again " + user);
 //   } else {
 //      user = prompt("Please enter your name:","");
 //      if (user != "" && user != null) {
