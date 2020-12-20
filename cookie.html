@@ -38,11 +38,11 @@ function checkCookie() {
   if (user != "") {
     alert("Welcome again " + user);
      //document.getElementById("userName").value = user;
-  // } else {
-  //    user = prompt("Please enter your name:","");
-  //    if (user != "" && user != null) {
-  //      setCookie("username", user, 30);
-  //    }
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
   }
 }
 
@@ -73,15 +73,15 @@ function checkCookie() {
 </div><!--end log form -->
 
 <script>
- $(document).ready(function(){
+ //$(document).ready(function(){
 
- $("#logIn").click(function(){
-  var log =  $("#userName").val();
-  ;
+ //$("#logIn").click(function(){
+ ////// var log =  $("#userName").val();
+ // ;
 
-   setCookie("username", log, 30)
- });
-    });
+  // setCookie("username", log, 30)
+// });
+  //  });
 </script>
 
 
