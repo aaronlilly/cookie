@@ -1,14 +1,23 @@
 <html>
 <head>
   <script>
-    function setCookie(cname, cvalue, exdays) {
-  var d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  var expires = "expires="+ d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
+//     function setCookie(cname, cvalue, exdays) {
+//   var d = new Date();
+//   d.setTime(d.getTime() + (exdays*24*60*60*1000));
+//   var expires = "expires="+ d.toUTCString();
+//   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+// }
     
-    setCookie("username", user, 30);
+      
+  $(document).ready(function () {  
+    
+     //setCookie("username", user, 30)
+    
+document.cookie = "username=john; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+   });
+  
+    
+  
   </script>
 <title> Log in or Create New </title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -37,15 +46,9 @@
 </div>
 </div>
 
-<script>
-
-// function setCookie(cname, cvalue, exdays) {
-//   var d = new Date();
-//   d.setTime(d.getTime() + (exdays*24*60*60*1000));
-//   var expires = "expires="+ d.toUTCString();
-//   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-// }
-function getCookie(cname) {
+  <script>
+    
+      function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
   var ca = decodedCookie.split(';');
@@ -60,23 +63,15 @@ function getCookie(cname) {
   }
   return "";
 }
+      $(document).ready(function () { 
+        var user = getCookie("username");
+        alert(user);
+         });
+    
+    
+  </script>
   
-//   $(document).ready(function () {  
-   
-//  setCookie("username", user, 30);
-//     });
-
-  </script>
-  <script>
-      
-  $(document).ready(function () {  
-    
-     setCookie("username", user, 30)
-    
- var user=getCookie("username")
- alert(user);
-   });
-  </script>
+  
 <link href="./scripts/style.css">
 </html>
 
