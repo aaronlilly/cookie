@@ -53,6 +53,7 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
+   alert('Hit');
   var user=getCookie("username");
   if (user != "") {
     alert("Welcome again " + user);
@@ -61,7 +62,7 @@ function checkCookie() {
      if (user != "" && user != null) {
        setCookie("username", user, 30);
      }
-    alert('Hit')
+   
   }
 }
 
