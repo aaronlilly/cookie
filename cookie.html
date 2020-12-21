@@ -29,13 +29,12 @@
 
 <script>
 
-function setCookie(cname,cvalue,exdays) {
+function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  var expires = "expires=" + d.toGMTString();
+  var expires = "expires="+ d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
@@ -51,29 +50,19 @@ function getCookie(cname) {
   }
   return "";
 }
-
-function checkCookie() {
-//    alert('Hit');
-   setCookie("username", user, 30)
-
-   var user2 =   getCookie("username");
-//   if (user != "") {
-//     alert("Welcome again " + user);
-//   } else {
-//      user = prompt("Please enter your name:","");
-//      if (user != "" && user != null) {
-//        setCookie("username", user, 30);
-//      }
-   alert(user2);
-//  }
-}
-
-   $(document).ready(function () {  
+  
+  $(document).ready(function () {  
    
-checkCookie();
+ setCookie("username", user, 30);
     });
 
-  
+  </script>
+  <script>
+      
+  $(document).ready(function () {  
+ var user=getCookie("username")
+ alert(user);
+   });
   </script>
 <link href="./scripts/style.css">
 </html>
