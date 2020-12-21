@@ -2,15 +2,43 @@
 <head>
 <title> Log in or Create New </title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-<script
-  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-  crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="./scripts/style.css">
-<script src="./scripts/cookie.js"></script>
+</head>
 
-<script>function setCookie(cname,cvalue,exdays) {
+
+
+<div class="log-form">
+<div id="LogH2">
+  <span id="loggy">
+  Login to your account
+</span>
+</div>
+<div id ="formIn">
+
+    <input type="text" id="username" class='inputbox' placeholder="username" />
+    <input type="password" title="username" class='inputbox' placeholder="password" />
+<br>
+<br>
+   
+<div id='buttons'>
+    <button id="logIn" class="btn btn-primary">Login</button>
+<button id="createNew" class="btn btn-success">Create New</button>
+</div>
+
+</div>
+</div>
+
+<script>
+ $(document).ready(function(){
+
+ $("#logIn").click(function(){
+  var log =  $("#userName").val();
+ ;
+
+   setCookie("username", log, 30)
+ });
+    });
+function setCookie(cname,cvalue,exdays) {
   var d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
   var expires = "expires=" + d.toGMTString();
@@ -36,73 +64,24 @@ function getCookie(cname) {
 function checkCookie() {
   var user=getCookie("username");
   if (user != "") {
-    alert("Welcome again " + user);
-     //document.getElementById("userName").value = user;
-  } else {
-     user = prompt("Please enter your name:","");
-     if (user != "" && user != null) {
-       setCookie("username", user, 30);
-     }
+    //alert("Welcome again " + user);
+  $("#userName").val() == user;
+  // } else {
+  //    user = prompt("Please enter your name:","");
+  //    if (user != "" && user != null) {
+  //      setCookie("username", user, 30);
+  //    }
   }
 }
 
-</script>
-</head>
+  $(document).ready(function () {  
+    
+    checkCookie();
 
-<body onload="checkCookie()"></body>
+    });
 
-<div class="log-form">
-<div id="LogH2">
-  <span id="loggy">
-  Login to your account
-</span>
-</div>
-<div id ="formIn">
-
-    <input type="text" id="username" class='inputbox' placeholder="username" />
-    <input type="password" title="username" class='inputbox' placeholder="password" />
-<br>
-<br>
-   
-<div id='buttons'>
-    <button id="logIn" class="btn btn-primary">Login</button>
-<button id="createNew" class="btn btn-success">Create New</button>
-</div>
-
-</div>
-</div><!--end log form -->
-
-<script>
- //$(document).ready(function(){
-
- //$("#logIn").click(function(){
- ////// var log =  $("#userName").val();
- // ;
-
-  // setCookie("username", log, 30)
-// });
-  //  });
 </script>
 
 
 </html>
 
-
-<!-- .half-circle {
-    width: 200px;
-    height: 100px;
-    background-color: gold;
-    border-top-left-radius: 110px;
-    border-top-right-radius: 110px;
-    border: 10px solid gray;
-    border-bottom: 0;
-}
-.half-circle2 {
-    width: 200px;
-    height: 95px;
-    background-color: blue;
-    border-bottom-left-radius: 110px;
-    border-bottom-right-radius: 110px;
-    border: 10px solid gray;
-    border-bottom: 0; -->
-<!-- } -->
