@@ -38,9 +38,12 @@
 // Cookies.get('name') => // => 'value'
 
    
-   $.cookie('name', 'value', { expires: 30, path: '/' });
+  // Set a cookie
+Cookies.set('name', 'value');
 
-   var COOKIE = $.cookie('name');
+// Read the cookie
+var COOKIE = Cookies.get('name');
+
    
    alert(COOKIE);
 
