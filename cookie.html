@@ -53,9 +53,10 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-   alert('Hit');
-  var user="hi"
-      //getCookie("username");
+//    alert('Hit');
+   setCookie("username", user, 30)
+
+      getCookie("username");
 //   if (user != "") {
 //     alert("Welcome again " + user);
 //   } else {
