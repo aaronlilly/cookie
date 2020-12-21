@@ -55,14 +55,14 @@ function getCookie(cname) {
 function checkCookie() {
    alert('Hit');
   var user=getCookie("username");
-  if (user != "") {
-    alert("Welcome again " + user);
-  } else {
-     user = prompt("Please enter your name:","");
-     if (user != "" && user != null) {
-       setCookie("username", user, 30);
-     }
-   
+//   if (user != "") {
+//     alert("Welcome again " + user);
+//   } else {
+//      user = prompt("Please enter your name:","");
+//      if (user != "" && user != null) {
+//        setCookie("username", user, 30);
+//      }
+   alert(user);
   }
 }
 
