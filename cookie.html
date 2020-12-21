@@ -5,8 +5,36 @@
 <link rel="stylesheet" href="./scripts/style.css">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 </head>
+
+<div class="log-form">
+<div id="LogH2">
+  <span id="loggy">
+  Login to your account
+</span>
+</div>
+<div id ="formIn">
+
+    <input type="text" id="username" class='inputbox' placeholder="username" />
+    <input type="password" title="username" class='inputbox' placeholder="password" />
+<br>
+<br>
+   
+<div id='buttons'>
+    <button id="logIn" class="btn btn-primary">Login</button>
+<button id="createNew" class="btn btn-success">Create New</button>
+</div>
+
+</div>
+</div>
+
 <script>
-  <script>
+ $(document).ready(function () {  
+    
+    checkCookie();
+
+    });
+
+
 
 function setCookie(cname,cvalue,exdays) {
   var d = new Date();
@@ -43,39 +71,6 @@ function checkCookie() {
   }
 }
   </script>
-
-
-<div class="log-form">
-<div id="LogH2">
-  <span id="loggy">
-  Login to your account
-</span>
-</div>
-<div id ="formIn">
-
-    <input type="text" id="username" class='inputbox' placeholder="username" />
-    <input type="password" title="username" class='inputbox' placeholder="password" />
-<br>
-<br>
-   
-<div id='buttons'>
-    <button id="logIn" class="btn btn-primary">Login</button>
-<button id="createNew" class="btn btn-success">Create New</button>
-</div>
-
-</div>
-</div>
-
-<script>
- $(document).ready(function () {  
-    
-    checkCookie();
-
-    });
-
-
-</script>
-
 <link href="./scripts/style.css">
 </html>
 
