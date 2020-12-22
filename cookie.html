@@ -30,16 +30,18 @@
 </div>
 <script>
    $(document).ready(function () { 
+     $('$logIn').click(function() {
      var uInput = $('#logIn').val();
  Cookies.set('name', uInput, { expires: 30, path: '' })
      
          });
+   });
    $(document).ready(function () { 
  var COOKI= Cookies.get('name');
      //alert(COOKI);
-//       if (COOKI != "") {
+       if (COOKI != "") {
     alert("Welcome again " + COOKI);
-//       }
+      }
          });
   </script>
   
