@@ -29,6 +29,12 @@
 </div>
 </div>
 <script>
+ //navI(){  window.location.href = "https://www.google.com";}
+  
+  cNBlank(COOKI){
+    alert("Welcome again " + COOKI);
+  }
+  
    $(document).ready(function () { 
      $('#logIn').click(function() {
      let uInput = $('#username').val();
@@ -41,7 +47,8 @@
  var COOKI= Cookies.get('name');
      //alert(COOKI);
        if (COOKI != "") {
-    alert("Welcome again " + COOKI);
+//     alert("Welcome again " + COOKI);
+         cNBlank(COOKI);
       }
          });
   </script>
