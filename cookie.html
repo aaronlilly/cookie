@@ -30,19 +30,23 @@
 </div>
 <script>
    $(document).ready(function () { 
- Cookies.set('name', 'value', { expires: 30, path: '' })
+     var input = $('#logIn').val();
+ Cookies.set('name', input, { expires: 30, path: '' })
      
          });
    $(document).ready(function () { 
  var COOKI= Cookies.get('name');
-     alert(COOKI);
+     //alert(COOKI);
+      if (user != "") {
+    alert("Welcome again " + COOKI);
+     
          });
   </script>
   
   
 <link href="./scripts/style.css">
 
-//https://github.com/js-cookie/js-cookie
+<!-- //https://github.com/js-cookie/js-cookie -->
 </html>
 
 
